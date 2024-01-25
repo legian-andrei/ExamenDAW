@@ -3,9 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace backend.Controllers
-{
-	[ApiController]
-	[Route("[controller]")]
+{ 
+//	[ApiController]
+//	[Route("[controller]")]
 	public class PublishersController : Controller
 	{
 		private AppDbContext db = new AppDbContext();
@@ -36,7 +36,7 @@ namespace backend.Controllers
 			{
 				db.Publishers.Add(p);
 				db.SaveChanges();
-				return RedirectToAction("NewPublisher");
+				return RedirectToAction("New");
 			}
 			catch (Exception)
 			{

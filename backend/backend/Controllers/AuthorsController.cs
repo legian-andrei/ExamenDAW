@@ -4,8 +4,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace backend.Controllers
 {
-	[ApiController]
-	[Route("[controller]")]
+	//[ApiController]
+	//[Route("[controller]")]
 	public class AuthorsController : Controller
 	{
 		private AppDbContext db = new AppDbContext();
@@ -37,7 +37,7 @@ namespace backend.Controllers
 			{
 				db.Authors.Add(a);
 				db.SaveChanges();
-				return RedirectToAction("GetAuthors");
+				return RedirectToAction("New");
 			}
 			catch (Exception)
 			{
